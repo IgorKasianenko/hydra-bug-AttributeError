@@ -1,0 +1,10 @@
+hydra:
+    run:
+        dir: ./outputs/${project.name}_${project.exp_name}
+    
+    sweep:
+        dir: ./outputs/${project.name}
+        subdir: ${hydra.job.num}_${hydra.job.id}
+
+defaults:
+    - experiment: default
